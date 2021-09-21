@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "longes_balanced_subarray"
+name = "longest_balanced_subarray"
 version = "0.1.0"
