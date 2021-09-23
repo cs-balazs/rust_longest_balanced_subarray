@@ -2,11 +2,10 @@ fn identify_subvector(input: &str) -> Option<&str> {
     match input {
         "" => None,
         input => {
-            match input
-                .chars()
-                .map(|char| if char.is_alphabetic() { 1 } else { -1 })
-                .sum()
-            {
+            match input.chars().fold(
+                0_isize,
+                |acc, ch| if ch.is_alphabetic() { acc + 1 } else { acc - 1 },
+            ) {
                 0 => Some(input),
                 _ => {
                     let left_subvector = identify_subvector(&input[..input.len() - 1]);
