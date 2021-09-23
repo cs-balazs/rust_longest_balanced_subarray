@@ -1,5 +1,5 @@
 fn helper(
-    balances: Vec<i32>,
+    balances: &Vec<i32>,
     from: usize,
     acc: (usize, usize),
     offset: i32,
@@ -47,7 +47,7 @@ fn identify_subvector(input: &str) -> Option<&str> {
     }
 
     let indexes = helper(
-        input
+        &input
             .chars()
             .scan(0, |state, char| {
                 *state += if char.is_alphabetic() { -1 } else { 1 };
