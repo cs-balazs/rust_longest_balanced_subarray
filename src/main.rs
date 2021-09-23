@@ -82,6 +82,7 @@ fn main() {
     );
 }
 
+/*
 fn slow_recursive_solution(input: &str) -> Option<&str> {
     match input {
         "" => None,
@@ -109,3 +110,4 @@ fn slow_recursive_solution(input: &str) -> Option<&str> {
         }
     }
 }
+*/
